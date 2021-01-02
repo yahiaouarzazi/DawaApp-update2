@@ -1,0 +1,15 @@
+<div class="form-group">
+    <label for="title">Nom</label>
+    <textarea required name="name" id="name" class="form-control"><%= user.name %></textarea>
+</div>
+<div class="form-group">  
+    <label for="title">Email</label>
+    <textarea required name="email" id="email" class="form-control"><%= user.email %></textarea>
+</div>
+<div class="form-group">
+    <label for="title">Rôle</label>
+    <textarea required name="role" id="role" class="form-control"><%= user.role %></textarea>
+</div>
+
+<button type="submit" class="btn btn-primary">Enregistrer</button>
+<a href='/listeusers' class="btn btn-secondary">annuler</a>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" 
+     crossorigin="anonymous">
+    <title>Pharmacie</title>
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+      <a class="navbar-brand" href="#">DAWA</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/Page">Page d'acceuil<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/register">Register</a>
+          </li>
+          
+          
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">A propos de l'application Web</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+      <h1 class="mb-4"><%= article.nom %></h1>
+      <div class="text-muted mb-2">
+        Date de création: <%= article.createdAt.toLocaleDateString() %>
+      </div>
+      <div class="mb-2">
+        Numéro de lot: <%= article.Nlot %>
+      </div>
+      <div class="mb-2">
+        Date de péremption: <%= article.datePeremption %>
+      </div>
+      <div class="mb-2">
+        prix: <%= article.prix %>
+      </div>
+      <div class="mb-2">
+        Code de produit: <%= article.codeP %>
+      </div>
+      <div class="mb-2">
+        Stock principal: <%= article.sP %>
+      </div>
+      <div class="mb-2">
+        Stock unité de soin 1: <%= article.s1 %>
+      </div>
+      <div class="mb-2">
+        Stock unité de soin 2: <%= article.s2 %>
+      </div>
+      <div class="mb-2">
+        Stock unité de soin 3: <%= article.s3 %>
+      </div>
+      <div class="mb-2">
+        Catégorie: <%= article.categorie %>
+      </div>
+      <a href="/liste/tout" class="btn btn-secondary">
+        Tous les médicaments
+      </a>
+      <a href="/articles/edit/<%= article.id %>" class="btn btn-info">
+        modifier
+      </a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<div class="form-group">
+    <label for="title">Nom</label>
+    <textarea required name="nomP" id="nomP" class="form-control"><%= patient.nomP %></textarea>
+</div>
+<div class="form-group">
+    <label for="title">Prénom</label>
+    <textarea required name="prenomP" id="prenomP" class="form-control"><%= patient.prenomP %></textarea>
+</div>
+<div class="form-group">
+    <label for="title">Age</label>
+    <textarea required name="ageP" id="ageP" class="form-control"><%= patient.ageP %></textarea>
+</div>
+<div class="form-group">
+    <label for="title">Sexe</label>
+    <textarea required name="sexeP" id="sexeP" class="form-control"><%= patient.sexeP %></textarea>
+</div>
+<div class="form-group">
+    <label for="title">CIN</label>
+    <textarea required name="CIN" id="CIN" class="form-control"><%= patient.CIN %></textarea>
+</div>
+<div class="form-group">
+    <label for="title">Traitement antérieur</label>
+    <textarea required name="traitementAnterieur" id="traitementAnterieur" class="form-control"><%= patient.traitementAnterieur %></textarea>
+</div>
+<div class="form-group">
+    <label for="title">Traitement en cours</label>
+    <textarea name="traitementenCours" id="traitementenCours" class="form-control"><%= patient.traitementenCours %></textarea>
+</div>
+<div class="form-group">
+    <label for="title">Antécédents et/ou allergies</label>
+    <textarea name="Antecedents_Allergies" id="Antecedents_Allergies" class="form-control"><%= patient.Antecedents_Allergies %></textarea>
+</div>
+<div class="form-group">
+    <label for="title">Données physiologiques et biologiques</label>
+    <textarea name="donnees_physio_bio" id="donnees_physio_bio" class="form-control"><%= patient.donnees_physio_bio %></textarea>
+</div>
+<button type="submit" class="btn btn-primary">Enregistrer</button>
+<a href='/liste3/tout' class="btn btn-secondary">annuler</a>

@@ -1,0 +1,42 @@
+<div class="form-group">
+    <label for="title">Nom médicament</label>
+    <input required value = "<%= article.nom %>" type="text" name="nom" id="nom" class="form-control">
+</div>
+<div class="form-group">
+    <label for="title">N° du lot</label>
+    <textarea required name="Nlot" id="Nlot" class="form-control"><%= article.Nlot %></textarea>
+</div>
+<div class="form-group">
+    <label for="title">Date de péremption (à entrer sous forme: YY-MM-DD exemple 2021-2-30)</label>
+    <textarea required type = "Date" name="datePeremption" id="datePeremption" class="form-control"><%= article.datePeremption %></textarea>
+</div>
+<div class="form-group">
+    <label for="title">Prix moyen pondéré</label>
+    <textarea required name="prix" id="prix" class="form-control"><%= article.prix %></textarea>
+</div>
+<div class="form-group">
+    <label for="title">Code produit:</label>
+    <textarea required name="codeP" id="codeP" class="form-control"><%= article.codeP %></textarea>
+</div>
+<div class="form-group">
+    <label for="title">Stock Principal</label>
+    <textarea required name="sP" id="sP" class="form-control"><%= article.sP %></textarea>
+</div>
+<div class="form-group">
+    <label for="title">Catégorie</label>
+    <textarea required name="categorie" id="categorie" class="form-control"><%= article.categorie %></textarea>
+</div>
+<div class="form-group">
+    <label for="title">Stock unité de soin 1</label>
+    <textarea required name="s1" id="s1" class="form-control"><%= article.s1 %></textarea>
+</div>
+<div class="form-group">
+    <label for="title">Stock unité de soin 2</label>
+    <textarea required name="s2" id="s2" class="form-control"><%= article.s2 %></textarea>
+</div>
+<div class="form-group">
+    <label for="title">Stock unité de soin 3</label>
+    <textarea required name="s3" id="s3" class="form-control"><%= article.s3 %></textarea>
+</div>
+<button type="submit" class="btn btn-primary">Enregistrer</button>
+<a href='/liste/tout' class="btn btn-secondary">annuler</a>

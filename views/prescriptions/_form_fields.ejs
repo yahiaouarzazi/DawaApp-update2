@@ -1,0 +1,35 @@
+<div class="form-group">
+    <label for="title">Autorisation</label>
+    <input required value = "<%= prescription.aut %>" type="text" name="aut" id="aut" class="form-control">
+</div>
+<div class="form-group">
+    <label for="title">Protocole d'administration</label>
+    <textarea required name="ProtocA" id="ProtocA" class="form-control"><%= prescription.ProtocA %></textarea>
+</div>
+<div class="form-group">
+    <label for="title"> Surveillance:</label>
+    <textarea required name="Surv" id="Surv" class="form-control"><%= prescription.Surv %></textarea>
+</div>
+<div class="form-group">
+    <label for="title">CIN</label>
+    <textarea required name="CIN" id="CIN" class="form-control"><%= prescription.CIN %></textarea>
+</div>
+<div class="form-group">
+    <label for="title">Diagnostic</label>
+    <textarea required name="Diag" id="Diag" class="form-control"><%= prescription.Diag %></textarea>
+</div>
+<div class="form-group">
+    <label for="title">Durée séjour en jours:</label>
+    <textarea required name="Sej" id="Sej" class="form-control"><%= prescription.Sej %></textarea>
+</div>
+<div class="form-group">
+    <label for="title">Validation</label>
+    <textarea required name="Valid" id="Valid" class="form-control"><%= prescription.Valid %></textarea>
+</div>
+<div class="form-group">
+    <label for="title">Avis Pharmaceutique</label>
+    <textarea required name="AvisP" id="AvisP" class="form-control"><%= prescription.AvisP %></textarea>
+</div>
+
+<button type="submit" class="btn btn-primary">Enregistrer</button>
+<a href='/liste2/tout' class="btn btn-secondary">annuler</a>

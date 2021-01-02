@@ -1,0 +1,35 @@
+<div class="form-group">
+    <label for="title">N° commande</label>
+    <textarea required name="Ncom" id="Ncom" class="form-control"><%= articleCM.Ncom %></textarea>
+</div>
+<div class="form-group">
+    <label for="title">Nom produit</label>
+    <textarea required name="nomP" id="nomP" class="form-control"><%= articleCM.nomP %></textarea>
+</div>
+<div class="form-group">
+    <label for="title">quantité</label>
+    <textarea required name="quantité" id="quantité" class="form-control"><%= articleCM.quantité %></textarea>
+</div>
+<div class="form-group">
+    <label for="title">CIN pharmacien préparateur</label>
+    <textarea required name="CINpharmacien" id="CINpharmacien" class="form-control"><%= articleCM.CINpharmacien %></textarea>
+</div>
+<div class="form-group">
+    <label for="title">Nom Fournisseur</label>
+    <textarea required name="nomF" id="nomF" class="form-control"><%= articleCM.nomF %></textarea>
+</div>
+<div class="form-group">
+    <label for="title">dateLivraison</label> 
+    <textarea required name="dateLivraison" id="dateLivraison" class="form-control"><%= articleCM.dateLivraison %></textarea>
+</div>
+<div class="form-group">
+    <label for="title">quantitélivrée</label>
+    <textarea required name="quantitélivrée" id="quantitélivrée" class="form-control"><%= articleCM.quantitélivrée %></textarea>
+</div>
+<div class="form-group">
+    <label for="title">validationLivraison</label>
+    <textarea required name="validationLivraison" id="validationLivraison" class="form-control"><%= articleCM.validationLivraison %></textarea>
+</div>
+
+<button type="submit" class="btn btn-primary">Enregistrer</button>
+<a href='/liste5' class="btn btn-secondary">annuler</a>

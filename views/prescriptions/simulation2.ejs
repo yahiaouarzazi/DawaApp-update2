@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" 
+     crossorigin="anonymous">
+    <title>Pharmacie</title>
+</head>
+<body>
+  <div class="container">
+    <div class="card mt-4">
+        <div class="card-body">
+           <div class="mb-4" style="height: 30px; width: 140px;background-color: rgba(94, 165, 150, 0.596);">
+            <h4 class="card-text text-white d-inline">Simulation 2</h4> 
+            </div>
+           <div class="card-subtitle text-muted mb-4">Calculer nombre d'unités d'un produit à commander selon durée d'administration.</div>
+           <form action="/prescriptions/postersim2" method="POST">
+           <div class="form-group">
+           <div class="form-group">
+            <label for="title">Code du produit</label>
+            <textarea required name="codeP2" id="codeP2" class="form-control"><%= codeP2ver %></textarea>
+           </div>
+           <label for="title">Durée du séjour en jours</label>
+           <textarea required name="sejour" id="sejour" class="form-control"><%= sejour2 %></textarea>
+           </div>
+           <label for="title">Nombre de comprimés ou sachets par jour</label>
+           <textarea required name="nombreJ" id="nombreJ" class="form-control"><%= nombreJ %></textarea>
+           </div>
+           <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Résultat de la simulation</h4>
+            <hr>
+            <p><%= texte %></p>
+          </div>
+          <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Code du produit</th>
+                <th scope="col">Durée séjour</th>
+                <th scope="col">quantité à commander</th>
+                <th scope="col">Disponibilité en stock</th>
+                <th scope="col">Alerte sur nombre d'administration par jour</th>
+                <th scope="col">Equivalent</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"></th>
+                <td><%= codeP2ver %></td>
+                <td><%= sejour2 %></td>
+                <td><%= resultat %></td>
+                <td class="text-info"><%= WarnStock %></td>
+                <td class="text-danger"><%= WarnFreq %></td>
+                <td>
+                  <% tab.forEach( element => { %>
+
+                           <div class="text-success"><%= element.nom %></div> 
+                           <div >code: <%= element.codeP %></div> 
+                           <div class="mb-4">Stock: <%= element.sP %></div>
+                        
+                <% }) %>
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+           <button type="submit" class="w-25 btn btn-outline-dark mb-2" data-dismiss="alert" >Simuler</button>
+           <a href='/liste2/tout' class="w-25 btn btn-outline-success">annuler</a>
+          </form>
+         </div>
+    </div>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,29 @@
+<div class="form-group">  
+    <label for="title">Unité de soin</label>
+    <textarea required name="unitéSoin" id="unitéSoin" class="form-control"><%= articleRet.unitéSoin %></textarea>
+</div>
+<div class="form-group">  
+    <label for="title">Médicament à retourner</label>
+    <textarea required name="med" id="med" class="form-control"><%= articleRet.med %></textarea>
+</div>
+<div class="form-group">
+    <label for="title">Quantité</label>
+    <textarea required name="quantité" id="quantité" class="form-control"><%= articleRet.quantité %></textarea>
+</div>
+<div class="form-group">
+    <label for="title">Motif</label>
+    <textarea required name="motif" id="motif" class="form-control"><%= articleRet.motif %></textarea>
+</div>
+<div class="form-group">
+    <label for="title">Validation pharmacien préparateur</label>
+    <textarea required name="validation" id="validation" class="form-control"><%= articleRet.validation %></textarea>
+</div>
+<div class="form-group">
+    <label for="title">Commentaire</label>
+    <textarea required name="commentaire" id="commentaire" class="form-control"><%= articleRet.commentaire %></textarea>
+</div>
+
+
+
+<button type="submit" class="btn btn-primary">Enregistrer</button>
+<a href='/liste7' class="btn btn-secondary">annuler</a>
